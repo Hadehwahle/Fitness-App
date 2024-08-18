@@ -59,11 +59,11 @@ const Hero = ({ toggleForm, formPop }) => {
       <Slider {...settings}>
         {imageList.map(({ id, heading, content, title }) => (
           <div
+            style={bgStyle}
             className=" dark:bg-black dark:text-white duration-200 w-full"
             data-aos="fade-up"
             data-aos-delay="900"
             key={id}
-            style={bgStyle}
           >
             <div
               data-aos="fade-down"
