@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .primary-btn {
+    @apply bg-primary text-white font-bold py-2 px-6 rounded-md hover:bg-primary/70 duration-200 inline-block;
+  }
+  .outline-btn {
+    @apply border-2 border-primary text-primary font-bold py-2 px-6 rounded-md hover:bg-primary/70 duration-200 inline-block mt-4 hover:text-black;
+  }
+  .input-label {
+    @apply block pb-1;
+  }
+  .input {
+    @apply w-full border border-primary rounded px-3 py-2 outline-none focus:ring-2 focus:border-primary dark:text-black;
+  }
+}
