@@ -8,7 +8,7 @@ const About2 = () => {
           <div className="space-y-4">
             {/* Heading section */}
             <div className="flex items-center gap-4">
-              <div className="text-primary text-7xl">
+              <div className="text-primary text-6xl">
                 <h1 data-aos="fade-down" className="font-bold">
                   02
                 </h1>
@@ -34,15 +34,12 @@ const About2 = () => {
             <div>
               <p data-aos="fade-down-right" data-aos-delay="700" className="">
                 We believe that running is for everyone, regardless of age,
-                <br /> pace, or experience level. Our community welcomes runners
-                <br />
-                from all walks of life. We are here to encourage and motivate{" "}
-                <br />
-                each other, every step of the way. <br />
-                We share stories, tips, and advice to help you stay motivated
-                <br />
-                and inspired. We are more than just a website <br /> We are a
-                community of runners who support and uplift each other.
+                pace, or experience level. Our community welcomes runners from
+                all walks of life. We are here to encourage and motivate each
+                other, every step of the way. We share stories, tips, and advice
+                to help you stay motivated and inspired. We are more than just a
+                website We are a community of runners who support and uplift
+                each other.
               </p>
             </div>
             <button
@@ -57,7 +54,7 @@ const About2 = () => {
           <div
             data-aos="flip-up"
             data-aos-delay="1200"
-            className="before:block before:absolute before:-inset-1 before:translate-y-6 before:bg-primary relative inline-block hover:before:translate-y-2 before:duration-200"
+            className="md:before:block md:before:absolute md:before:-inset-1 md:before:translate-y-6 md:before:bg-primary relative inline-block hover:before:translate-y-2 before:duration-200"
           >
             <img
               src={AboutUs}
