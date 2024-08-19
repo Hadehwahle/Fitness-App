@@ -42,7 +42,7 @@ const Highlights = () => {
   };
 
   return (
-    <div className="dark:bg-dark py-6">
+    <div className="dark:bg-dark py-6 ">
       <div className=" container w-full items-center min-h-[70dvh] ">
         <div className="">
           <h1
@@ -67,7 +67,7 @@ const Highlights = () => {
             {blogSnip.map(({ img, headline, link, id, trans, time }) => (
               <div key={id}>
                 <div
-                  className="flex flex-col items-center gap-4 hover:shadow-xl rounded-2xl cursor-pointer p-4 text-center dark:bg-dark  dark:hover:bg-black  duration-200 mx-4"
+                  className="flex flex-col items-center gap-4 hover:shadow-xl rounded-2xl cursor-pointer p-4 text-center dark:bg-dark  dark:hover:bg-black  duration-200 mx-4 overflow-x-hidden"
                   data-aos={trans}
                   data-aos-delay={time}
                 >
