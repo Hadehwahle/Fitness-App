@@ -10,7 +10,7 @@ const blogSnip = [
     img: image1,
     headline: "Benefits of Cross-Training for Runners",
     link: "https://coolrunningsfitnessblog.com/benefits-of-cross-training-for-runners/",
-    trans: "slide-up",
+    trans: "fade-up",
     time: "100",
   },
   {
@@ -18,7 +18,7 @@ const blogSnip = [
     img: image2,
     headline: "Endurance Running for Beginners",
     link: "https://coolrunningsfitnessblog.com/endurance-running-for-beginners/",
-    trans: "slide-up",
+    trans: "fade-up",
     time: "300",
   },
   {
@@ -26,7 +26,7 @@ const blogSnip = [
     img: image3,
     headline: "Treating Common Running Injuries: A Comprehensive Guide",
     link: "https://coolrunningsfitnessblog.com/treating-common-running-injuries-a-comprehensive-guide/",
-    trans: "slide-up",
+    trans: "fade-up",
     time: "500",
   },
   {
@@ -34,7 +34,7 @@ const blogSnip = [
     img: image4,
     headline: "Interval Training: Boost Your Running Performance",
     link: "https://coolrunningsfitnessblog.com/interval-training-boost-your-running-performance/",
-    trans: "slide-up",
+    trans: "fade-up",
     time: "300",
   },
   {
@@ -42,7 +42,7 @@ const blogSnip = [
     img: image5,
     headline: "Mastering Your Running Pace on Race Day",
     link: "https://coolrunningsfitnessblog.com/mastering-your-running-pace-on-race-day/",
-    trans: "slide-up",
+    trans: "fade-up",
     time: "100",
   },
 ];

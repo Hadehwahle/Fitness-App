@@ -32,7 +32,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="sticky bg-white top-0  shadow-xl w-full dark:bg-dark dark:text-white z-50 py-2">
+      <nav className="sticky bg-white top-0  shadow-xl w-full dark:bg-dark dark:text-white z-50 py-2 ">
         <div className="container">
           <div className="flex items-center justify-between">
             <div>
@@ -97,7 +97,7 @@ const Navbar = () => {
               duration={800}
               key={id}
               offset={-65}
-              className="list-none w-full text-center p-4 hover:bg-primary hover:text-white cursor-pointer "
+              className="list-none w-full text-center p-4 hover:bg-primary hover:duration-200 cursor-pointer "
             >
               <li>
                 {menuOpen && (

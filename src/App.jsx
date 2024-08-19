@@ -24,7 +24,7 @@ const App = () => {
     });
   });
   return (
-    <div className=" dark:bg-black bg-white dark:text-white text-black">
+    <div className=" dark:bg-black bg-white dark:text-white text-black ">
       <Navbar />
       <Hero formPop={formPop} toggleForm={toggleForm} />
       <Highlights />

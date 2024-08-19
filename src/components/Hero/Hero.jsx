@@ -56,7 +56,7 @@ const Hero = ({ toggleForm, formPop }) => {
     pauseOnFocus: true,
   };
   return (
-    <div id="home" className="overflow-x-hidden">
+    <div id="home" className="overflow-hidden">
       <div
         className=" dark:bg-black dark:text-white duration-200"
         data-aos="fade-up"
@@ -65,7 +65,7 @@ const Hero = ({ toggleForm, formPop }) => {
       >
         <div
           data-aos="fade-down"
-          className="bg-white/80 dark:bg-dark/80 duration-200"
+          className="bg-white/80 dark:bg-dark/80 duration-200 overflow-hidden"
         >
           <Slider {...settings}>
             {imageList.map(({ id, heading, content, title }) => (

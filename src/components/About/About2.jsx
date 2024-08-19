@@ -1,13 +1,13 @@
 import AboutUs from "../../assets/images/3.png";
 const About2 = () => {
   return (
-    <div className="py-16 dark:bg-dark dark:text-white bg-white duration-200">
+    <div className="py-16 dark:bg-dark dark:text-white bg-white duration-200 overflow-hidden">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center">
           {/* text section */}
           <div className="space-y-4">
             {/* Heading section */}
-            <div className="flex items-center gap-4">
+            <div className="flex  lg:items-center justify-center items-center lg:justify-start gap-4">
               <div className="text-primary text-6xl">
                 <h1 data-aos="fade-down" className="font-bold">
                   02
@@ -22,8 +22,8 @@ const About2 = () => {
                   Cool Fitness Running
                 </p>
                 <h1
-                  data-aos="fade-up-right"
-                  data-aos-delay="500"
+                  data-aos="fade-left"
+                  data-aos-delay="300"
                   className="text-2xl sm:text-4xl font-bold"
                 >
                   Our Values
@@ -32,7 +32,11 @@ const About2 = () => {
             </div>
             {/* bottom section */}
             <div>
-              <p data-aos="fade-down-right" data-aos-delay="700" className="">
+              <p
+                data-aos="fade-down"
+                data-aos-delay="400"
+                className="lg:w-[30rem] text-[1.3rem]"
+              >
                 We believe that running is for everyone, regardless of age,
                 pace, or experience level. Our community welcomes runners from
                 all walks of life. We are here to encourage and motivate each
@@ -44,7 +48,7 @@ const About2 = () => {
             </div>
             <button
               data-aos="fade-down"
-              data-aos-delay="700"
+              data-aos-delay="500"
               className="outline-btn"
             >
               Get Started
@@ -52,8 +56,8 @@ const About2 = () => {
           </div>
           {/* Image section */}
           <div
-            data-aos="flip-up"
-            data-aos-delay="1200"
+            data-aos="fade-up"
+            data-aos-delay="600"
             className="md:before:block md:before:absolute md:before:-inset-1 md:before:translate-y-6 md:before:bg-primary relative inline-block hover:before:translate-y-2 before:duration-200"
           >
             <img

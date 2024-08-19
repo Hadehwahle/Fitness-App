@@ -42,23 +42,26 @@ const Highlights = () => {
   };
 
   return (
-    <div className="dark:bg-dark py-6 ">
+    <div className="dark:bg-dark py-6 overflow-hidden">
       <div className=" container w-full items-center min-h-[70dvh] ">
         <div className="">
           <h1
-            data-aos="zoom-out"
-            data-aos-delay="600"
-            className="text-primary text-center text-3xl md:text-6xl font-bold py-4"
+            data-aos="fade-down"
+            data-aos-delay="300"
+            className="text-primary text-center text-3xl md:text-4xl font-bold py-4"
           >
             We Run Together
           </h1>
           <p
             data-aos="fade-up"
-            data-aos-delay="300"
-            className=" text-2xl font-semibold text-center pb-8"
+            data-aos-delay="400"
+            className="text-[1.3rem] text-center lg:text-left pb-8 w-[95%] mx-auto"
           >
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis
-            eum, recusand
+            In the rhythm of our footsteps, we find the power of companionship.
+            Each stride we take together resonates with a shared heartbeat,
+            creating a soothing melody that transcends words. As we match our
+            paces and breathe in sync, we forge connections that strengthen our
+            resolve and uplift our spirits.
           </p>
         </div>
 

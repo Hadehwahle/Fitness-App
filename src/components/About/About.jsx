@@ -2,7 +2,7 @@ import About2 from "./About2";
 import AboutUs from "../../assets/images/8.png";
 const About = () => {
   return (
-    <div>
+    <div className="overflow-hidden text-center md:text-left">
       <div
         id="about"
         className="py-16 dark:bg-black dark:text-white bg-slate-100 duration-200"
@@ -11,7 +11,7 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 place-items-center">
             {/* Image section */}
             <div
-              data-aos="fade-down-left"
+              data-aos="fade-down"
               className="md:before:block md:before:absolute md:before:-inset-1 md:before:-translate-x-6 md:before:bg-primary relative inline-block hover:before:-translate-x-2 before:duration-200"
             >
               <img
@@ -23,7 +23,7 @@ const About = () => {
             {/* text section */}
             <div className="space-y-4">
               {/* Heading section */}
-              <div className="flex items-center gap-4">
+              <div className="flex lg:items-center justify-center items-center lg:justify-start gap-4 ">
                 <div className="text-primary text-6xl">
                   <h1
                     data-aos="fade-up"
@@ -36,14 +36,14 @@ const About = () => {
                 <div>
                   <p
                     data-aos="fade-down"
-                    data-aos-delay="500"
+                    data-aos-delay="400"
                     className="text-primary"
                   >
                     Cool Fitness Running
                   </p>
                   <h1
                     data-aos="fade-left"
-                    data-aos-delay="700"
+                    data-aos-delay="500"
                     className="text-2xl sm:text-4xl font-bold"
                   >
                     About Us
@@ -52,7 +52,11 @@ const About = () => {
               </div>
               {/* bottom section */}
               <div>
-                <p className="" data-aos="fade-right" data-aos-delay="900">
+                <p
+                  className="lg:w-[30rem] text-[1.3rem]"
+                  data-aos="fade-right "
+                  data-aos-delay="600"
+                >
                   Welcome to the Cool Runnings Fitness! We have a passion for
                   runners, helping them on their journey and creating a
                   community. CRF is all about improving the runner experience,
@@ -60,8 +64,8 @@ const About = () => {
                 </p>
               </div>
               <button
-                data-aos="fade-down-right"
-                data-aos-delay="1000"
+                data-aos="fade-up"
+                data-aos-delay="700"
                 className="outline-btn"
               >
                 Get Started
