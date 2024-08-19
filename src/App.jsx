@@ -1,8 +1,9 @@
 import About from "./components/About/About";
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
-import About2 from "./components/About/About2";
+
 import Contact from "./components/Contact/Contact";
+import Highlights from "./components/Hero/Highlights";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
@@ -26,8 +27,8 @@ const App = () => {
     <div className=" dark:bg-black bg-white dark:text-white text-black">
       <Navbar />
       <Hero formPop={formPop} toggleForm={toggleForm} />
+      <Highlights />
       <About />
-      <About2 />
       <Contact toggleForm={toggleForm} />
     </div>
   );
