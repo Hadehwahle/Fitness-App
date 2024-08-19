@@ -1,6 +1,6 @@
 const Content = ({ heading, title, content }) => {
   return (
-    <div className="container min-h-[100svh] lg:min-h-[90lvh] flex items-center overflow-x-hidden">
+    <div className="container min-h-[100svh] lg:min-h-[90svh] flex items-center overflow-x-hidden">
       <div className="w-full md:w-[1100px] mx-auto text-center space-y-5">
         <p
           data-aos="fade-up"
