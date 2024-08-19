@@ -36,7 +36,7 @@ const Navbar = () => {
         <div className="container">
           <div className="flex items-center justify-between">
             <div>
-              <img src={Logo} alt="logo" className="w-24 sm:w-28 md:m-2" />
+              <img src={Logo} alt="logo" className="w-16 sm:w-28 md:m-2" />
             </div>
             <div>
               <ul className=" items-center gap-12 hidden xl:flex">
@@ -57,7 +57,7 @@ const Navbar = () => {
             </div>
             <div className="hidden items-center gap-6 xl:flex">
               <div className="flex items-center gap-2 group duration-200">
-                <BiPhoneCall className="text-3xl text-primary animate-pulse group-hover:scale-105 cursor-pointer" />
+                <BiPhoneCall className="text-2xl sm:text-3xl text-primary animate-pulse group-hover:scale-105 cursor-pointer" />
                 <span className="text-[1.2rem] cursor-pointer">
                   +1 (859) 466-7907
                 </span>
@@ -66,18 +66,18 @@ const Navbar = () => {
             </div>
 
             {!menuOpen ? (
-              <div className="flex items-center gap-2 xl:hidden">
+              <div className="flex items-center gap-3 xl:hidden">
                 <Darkmode />
                 <i
-                  className="bx bx-menu  text-4xl cursor-pointer"
+                  className="bx bx-menu  text-2xl sm:text-4xl cursor-pointer"
                   onClick={() => setMenuOpen(!menuOpen)}
                 ></i>
               </div>
             ) : (
-              <div className=" items-center gap-2 xl:hidden flex">
+              <div className=" items-center gap-3 xl:hidden flex">
                 <Darkmode />
                 <i
-                  className="bx bx-x text-4xl cursor-pointer"
+                  className="bx bx-x text-2xl sm:text-4xl cursor-pointer"
                   onClick={() => setMenuOpen(!menuOpen)}
                 ></i>
               </div>
@@ -85,7 +85,7 @@ const Navbar = () => {
           </div>
         </div>
         <div
-          className={`absolute xl:hidden top-[3.5rem] left-0 w-full dark:bg-dark dark:text-white bg-white flex flex-col items-center font-semibold gap-6 text-lg transform transition-transform z-10 shadow-xl ${
+          className={`absolute xl:hidden top-[3rem] sm:top-[3.5rem] md:top-[4rem] left-0 w-full dark:bg-dark dark:text-white bg-white flex flex-col items-center font-semibold gap-6 text-lg transform transition-transform z-10 shadow-xl ${
             menuOpen ? "opacity-100" : "opacity-0"
           }`}
           style={{ transition: "transform 0.3s ease, opacity 0.3s ease" }}
@@ -97,7 +97,7 @@ const Navbar = () => {
               duration={800}
               key={id}
               offset={-65}
-              className="list-none w-full text-center p-4 hover:bg-primary cursor-pointer"
+              className="list-none w-full text-center p-4 hover:bg-primary hover:text-white cursor-pointer "
             >
               <li>
                 {menuOpen && (
@@ -106,7 +106,7 @@ const Navbar = () => {
                     smooth={true}
                     duration={1000}
                     offset={-60}
-                    className="inline-block text-xl font-semibold text-[1rem] dark:hover:text-white duration-200"
+                    className="inline-block text-xl font-semibold text-[0.9rem] md:text-[1rem] dark:hover:text-white duration-200"
                   >
                     {name}
                   </Link>
