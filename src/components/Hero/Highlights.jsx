@@ -48,14 +48,14 @@ const Highlights = () => {
           <h1
             data-aos="fade-down"
             data-aos-delay="300"
-            className="text-primary text-center text-3xl md:text-4xl font-bold py-4"
+            className="text-primary text-center text-[1.5rem] sm:text-3xl md:text-4xl font-bold py-4"
           >
             We Run Together
           </h1>
           <p
             data-aos="fade-up"
             data-aos-delay="400"
-            className="text-[1.3rem] text-center lg:text-left pb-8 w-[95%] mx-auto"
+            className="text-1xl sm:text-[1.3rem] text-center lg:text-left pb-8 w-[95%] mx-auto"
           >
             In the rhythm of our footsteps, we find the power of companionship.
             Each stride we take together resonates with a shared heartbeat,

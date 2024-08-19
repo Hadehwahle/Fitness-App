@@ -35,7 +35,7 @@ const About2 = () => {
               <p
                 data-aos="fade-down"
                 data-aos-delay="400"
-                className="lg:w-[30rem] text-[1.3rem]"
+                className="lg:w-[30rem] text-1xl sm:text-[1.3rem] "
               >
                 We believe that running is for everyone, regardless of age,
                 pace, or experience level. Our community welcomes runners from

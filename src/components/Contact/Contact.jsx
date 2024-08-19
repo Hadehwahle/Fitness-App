@@ -5,7 +5,7 @@ const Contact = ({ toggleForm }) => {
         <div
           className="grid grid-cols-1 sm:grid-cols-3 gap-4"
           data-aos="fade-down"
-          data-aos-delay="300"
+          data-aos-delay="100"
         >
           <div className="col-span-2">
             <h1 className="text-1xl sm:text-2xl md:text-3xl text-center md:text-left font-bold text-black/80 dark:text-white lg:w-[77%] lg:mx-auto">

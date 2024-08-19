@@ -53,7 +53,7 @@ const About = () => {
               {/* bottom section */}
               <div>
                 <p
-                  className="lg:w-[30rem] text-[1.3rem]"
+                  className="lg:w-[30rem] text-1xl sm:text-[1.3rem] "
                   data-aos="fade-right "
                   data-aos-delay="600"
                 >
