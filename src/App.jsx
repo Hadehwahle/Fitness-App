@@ -10,6 +10,11 @@ import { useEffect, useState } from "react";
 
 const App = () => {
   const [formPop, setFormPop] = useState(false);
+  const [download, setDownload] = useState(false);
+
+  function handleCloseButton() {
+    setDownload((prev) => !prev);
+  }
 
   const toggleForm = () => {
     setFormPop((prev) => !prev);
@@ -30,7 +35,11 @@ const App = () => {
       <Highlights />
       <About />
       <Contact toggleForm={toggleForm} />
-      <Footer />
+      <Footer
+        download={download}
+        setDownload={setDownload}
+        handleCloseButton={handleCloseButton}
+      />
     </div>
   );
 };
