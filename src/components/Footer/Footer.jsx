@@ -164,7 +164,7 @@ const Footer = () => {
                 <p className="text-[0.7rem]">Subscribe To Our Newsletter</p>
               </div>
               <div>
-                <div className="bg-dark dark:bg-white sm:w-[25rem] p-[0.4rem] px-[2rem] flex justify-between rounded-md duration-200">
+                <div className="bg-dark dark:bg-white sm:w-[25rem] p-[0.4rem] pl-[2rem] flex justify-between rounded-md duration-200">
                   <input
                     className="h-[2rem] border-none outline-none text-white dark:text-black bg-transparent text-[0.8rem] flex-[0.9] duration-200"
                     type="email"
