@@ -9,6 +9,7 @@ import {
 import Logo from "../../assets/images/16.jpg";
 import { Link } from "react-scroll";
 import { useState } from "react";
+import Store from "./Store";
 
 const navlinks = [
   {
@@ -33,7 +34,7 @@ const navlinks = [
   },
 ];
 
-const Footer = () => {
+const Footer = ({ handleCloseButton, download, setDownload }) => {
   const [subscriber, setSubscriber] = useState("");
   const currentYear = new Date().getFullYear();
   function handleSubscriber(e) {
@@ -120,6 +121,7 @@ const Footer = () => {
                 <div className=" flex flex-row  gap-6">
                   <div>
                     <button
+                      onClick={handleCloseButton}
                       className="flex items-center bg-black p-1  text-white rounded-lg dark:bg-white dark:text-black duration-200 hover:bg-black/80 hover:dark:bg-white/80"
                       type="button"
                     >
@@ -139,6 +141,7 @@ const Footer = () => {
 
                   <div>
                     <button
+                      onClick={handleCloseButton}
                       className="flex items-center bg-black p-1  text-white rounded-lg dark:bg-white dark:text-black duration-200 hover:bg-black/80 hover:dark:bg-white/80"
                       type="button"
                     >
@@ -187,6 +190,11 @@ const Footer = () => {
           Cool Fitness Runnings/All Right Reserved &copy;{currentYear}
         </p>
       </footer>
+      <Store
+        handleCloseButton={handleCloseButton}
+        download={download}
+        setDownload={setDownload}
+      />
     </>
   );
 };
