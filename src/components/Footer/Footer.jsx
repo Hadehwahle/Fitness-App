@@ -183,7 +183,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <p className="text-center pt-6">
+        <p className="text-center text-[0.5rem] pt-6">
           Cool Fitness Runnings/All Right Reserved &copy;{currentYear}
         </p>
       </footer>
