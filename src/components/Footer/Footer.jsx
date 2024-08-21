@@ -69,9 +69,9 @@ const Footer = () => {
           </div>
           <div className=" flex flex-col-reverse xl:flex-row justify-between">
             <div className="w-full flex flex-col lg:gap-20 xl:gap-10 md:flex-row md:gap-8 md:items-start items-center text-center   md:text-left mt-4">
-              <div className="flex">
+              <div className="flex pb-6 md:pb-0">
                 <ul className=" items-left flex flex-col">
-                  <p className="font-semibold pb-4">Quick Links</p>
+                  <p className="font-semibold md:pb-4">Quick Links</p>
                   {navlinks.map(({ id, name, link }) => (
                     <li key={id}>
                       <Link
@@ -88,13 +88,13 @@ const Footer = () => {
                 </ul>
               </div>
               <div className="flex flex-col md:text-left">
-                <div className="pb-4">
+                <div className="md:pb-4 pb-1">
                   <p className="font-semibold">Social Media</p>
                   <p className="text-[0.8rem]">
                     Follow us on social media to get updates.
                   </p>
                 </div>
-                <div className="flex md:justify-start justify-center gap-3">
+                <div className="flex md:justify-start justify-center gap-3 pb-6 md:pb-0">
                   <a
                     href="https://web.facebook.com/coolrunningsfitnessapp?_rdc=1&_rdr"
                     target="_blank"
@@ -116,7 +116,7 @@ const Footer = () => {
               <div className="flex items-center gap-2 group duration-200 flex-col"></div>
 
               <div>
-                <p className="font-semibold pb-4">Download Our App</p>
+                <p className="font-semibold md:pb-4 pb-1">Download Our App</p>
                 <div className=" flex flex-row  gap-6">
                   <div>
                     <button
