@@ -7,8 +7,7 @@ import {
   BiLogoInstagramAlt,
 } from "react-icons/bi";
 import Logo from "../../assets/images/16.jpg";
-import { Link } from "react-router-dom";
-
+import { Link } from "react-scroll";
 import { useState } from "react";
 
 const navlinks = [
@@ -36,38 +35,20 @@ const navlinks = [
 
 const Footer = () => {
   const [subscriber, setSubscriber] = useState("");
-
+  const currentYear = new Date().getFullYear();
   function handleSubscriber(e) {
     setSubscriber(e.target.value);
   }
 
   return (
     <>
-      <nav className="bg-white w-full dark:bg-dark dark:text-white z-50 py-12">
-        <div className="container">
-          <div className="flex  items-center justify-between">
-            <div className="flex flex-col gap-4">
-              <div>
-                <h1 style={{ fontFamily: "Racing Sans One" }}>COOL FITNESS</h1>
-              </div>
-              <div className="flex justify-center gap-2">
-                <Link
-                  to="https://web.facebook.com/coolrunningsfitnessapp?_rdc=1&_rdr"
-                  target="_blank"
-                >
-                  <BiLogoFacebookCircle className="text-2xl cursor-pointer hover:text-[#1773ea] duration-200" />
-                </Link>
-                <Link
-                  to="https://www.instagram.com/cool_runnings_fitness/"
-                  target="_blank"
-                >
-                  <BiLogoInstagramAlt className="text-2xl cursor-pointer hover:text-[#c535a0] duration-200" />
-                </Link>
-                <Link to="mailto:contact@coolrunningsfitenss.com">
-                  <BiEnvelope className="text-2xl cursor-pointer duration-200 hover:text-primary" />
-                </Link>
-              </div>
-
+      <footer className="bg-white w-full dark:bg-dark dark:text-white py-10">
+        <div className="container flex flex-col gap-6">
+          <div className="flex justify-between items-center">
+            <div>
+              <img src={Logo} alt="footer-logo" className="w-28 rounded-full" />
+            </div>
+            <div>
               <div className="flex text-[0.8rem] items-center">
                 <BiPhoneCall className=" text-primary animate-pulse group-hover:scale-105 cursor-pointer" />
                 <span className=" cursor-pointer font-semibold">
@@ -81,8 +62,11 @@ const Footer = () => {
                 </span>
               </div>
             </div>
+          </div>
+          <div className="flex  justify-between">
             <div className="flex gap-6">
               <ul className=" items-left flex flex-col">
+                <p className="">Quick Links</p>
                 {navlinks.map(({ id, name, link }) => (
                   <li key={id}>
                     <Link
@@ -90,7 +74,7 @@ const Footer = () => {
                       smooth={true}
                       duration={800}
                       offset={-75}
-                      className="inline-block text-[0.7rem] font-semibold lg:text-[1rem] hover:text-primary duration-200 cursor-pointer"
+                      className="inline-block text-[0.8rem] hover:text-primary duration-200 cursor-pointer font-semibold"
                     >
                       {name}
                     </Link>
@@ -98,67 +82,98 @@ const Footer = () => {
                 ))}
               </ul>
             </div>
+            <div className="flex flex-col gap-4">
+              <p>Social Media</p>
+              <p className="text-[0.8rem]">
+                Follow us on social media to get updates.
+              </p>
+              <div className="flex justify-left gap-3">
+                <a
+                  href="https://web.facebook.com/coolrunningsfitnessapp?_rdc=1&_rdr"
+                  target="_blank"
+                >
+                  <BiLogoFacebookCircle className="text-3xl cursor-pointer hover:text-[#1773ea] duration-200" />
+                </a>
+                <a
+                  href="https://www.instagram.com/cool_runnings_fitness/"
+                  target="_blank"
+                >
+                  <BiLogoInstagramAlt className="text-3xl cursor-pointer hover:text-[#c535a0] duration-200" />
+                </a>
+                <a href="mailto:contact@coolrunningsfitenss.com">
+                  <BiEnvelope className="text-3xl cursor-pointer duration-200 hover:text-primary" />
+                </a>
+              </div>
+            </div>
+
             <div className="flex items-center gap-2 group duration-200 flex-col"></div>
             <div>
-              <p>Subscribe To Our Newsletter</p>
-              <div className="bg-white flex w-[300px] h-[40px] rounded-lg items-center">
-                <BiEnvelope className="text-black text-[2.1rem]" />
-
+              <p>Newsletter</p>
+              <p className="text-[0.7rem]">Subscribe To Our Newsletter</p>
+              <div className="bg-dark dark:bg-white w-[25rem] p-[0.4rem] px-[2rem] flex justify-between rounded-md  items duration-200">
                 <input
-                  className="w-[185px] h-[40px] px-[10px] border-none outline-none text-black bg-white text-[0.8rem]"
+                  className="h-[2rem] border-none outline-none text-white dark:text-black bg-transparent text-[0.8rem] flex-[0.9] duration-200"
                   type="email"
                   name="email"
+                  placeholder="Your Email"
                   id=""
                   value={subscriber}
                   onChange={handleSubscriber}
                 />
-                <button className="bg-primary text-white font-bold p-[1rem] h-[40px] rounded-md flex items-center  hover:bg-primary/70 duration-200 text-[0.7rem]">
+                <button className="w-[6.125rem]  bg-primary text-white font-bold px-[1rem] h-[1.8875rem] rounded-md cursor-pointer  hover:bg-primary/70 duration-200 text-[0.75rem]">
                   Subscribe
                 </button>
               </div>
             </div>
-            <div className="lg:flex-row flex flex-col gap-4">
-              <div>
-                <button
-                  className="flex items-center bg-black p-4  text-white rounded-lg dark:bg-white dark:text-black duration-200 hover:bg-black/80 hover:dark:bg-white/80"
-                  type="button"
-                >
-                  <div>
-                    <BiLogoApple className="text-2xl lg:text-4xl" />
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="font-semibold text-[0.5rem]">
-                      DOWNLOAD ON
-                    </span>
-                    <span className="text-[1rem] lg:text-[1.25rem] font-bold">
-                      App Store
-                    </span>
-                  </div>
-                </button>
-              </div>
+            <div>
+              <p>Download Our App</p>
+              <div className="lg:flex-row flex flex-col gap-4">
+                <div>
+                  <button
+                    className="flex items-center bg-black p-1  text-white rounded-lg dark:bg-white dark:text-black duration-200 hover:bg-black/80 hover:dark:bg-white/80"
+                    type="button"
+                  >
+                    <div>
+                      <BiLogoApple className="text-2xl lg:text-4xl" />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="font-semibold text-[0.5rem] text-left">
+                        DOWNLOAD ON
+                      </span>
+                      <span className="text-[1rem] lg:text-[1.25rem] font-bold">
+                        App Store
+                      </span>
+                    </div>
+                  </button>
+                </div>
 
-              <div>
-                <button
-                  className="flex items-center bg-black p-4  text-white rounded-lg dark:bg-white dark:text-black duration-200 hover:bg-black/80 hover:dark:bg-white/80"
-                  type="button"
-                >
-                  <div>
-                    <BiLogoPlayStore className="text-2xl lg:text-4xl" />
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="font-semibold text-[0.5rem]">
-                      DOWNLOAD ON
-                    </span>
-                    <span className="text-[1rem] lg:text-[1.25rem] font-bold">
-                      Play Store
-                    </span>
-                  </div>
-                </button>
+                <div>
+                  <button
+                    className="flex items-center bg-black p-1  text-white rounded-lg dark:bg-white dark:text-black duration-200 hover:bg-black/80 hover:dark:bg-white/80"
+                    type="button"
+                  >
+                    <div>
+                      <BiLogoPlayStore className="text-2xl lg:text-4xl" />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="font-semibold text-[0.5rem] text-left">
+                        DOWNLOAD ON
+                      </span>
+                      <span className="text-[1rem] lg:text-[1.25rem] font-bold">
+                        Play Store
+                      </span>
+                    </div>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </nav>
+        <hr />
+        <p className="text-center">
+          Cool Fitness Runnings/All Right Reserved &copy;{currentYear}
+        </p>
+      </footer>
     </>
   );
 };

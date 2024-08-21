@@ -5,8 +5,19 @@ const Message = ({ toggleForm }) => {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    // const formData = new FormData(e.target);
+
+    // console.log(formData.get("name"));
+    // console.log(formData.get("email"));
+    // console.log(formData.get("message"));
+
+    toggleForm();
+  }
+
   return (
-    <form className="flex flex-col gap-3">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-3">
       <div>
         <label htmlFor="name" className="input-label">
           Your Name
@@ -47,11 +58,8 @@ const Message = ({ toggleForm }) => {
           onChange={(e) => setMessage(e.target.value)}
         ></textarea>
       </div>
-      <button className="primary-btn" onClick={toggleForm}>
-        SEND
-      </button>
+      <button className="primary-btn">SEND</button>
     </form>
   );
 };
-
 export default Message;
