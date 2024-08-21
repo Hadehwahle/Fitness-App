@@ -59,7 +59,7 @@ const Navbar = () => {
               <div className="flex items-center gap-2 group duration-200">
                 <BiPhoneCall className="text-2xl sm:text-3xl text-primary animate-pulse group-hover:scale-105 cursor-pointer" />
                 <span className="text-[1.2rem] cursor-pointer">
-                  +1 (859) 466-7907
+                  +1 (502) 544-7761
                 </span>
               </div>
               <Darkmode />
