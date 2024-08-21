@@ -1,7 +1,7 @@
 import About from "./components/About/About";
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
-
+import Footer from "./components/Footer/Footer";
 import Contact from "./components/Contact/Contact";
 import Highlights from "./components/Hero/Highlights";
 import AOS from "aos";
@@ -30,6 +30,7 @@ const App = () => {
       <Highlights />
       <About />
       <Contact toggleForm={toggleForm} />
+      <Footer />
     </div>
   );
 };
