@@ -11,7 +11,7 @@ const Store = ({ download, handleCloseButton }) => {
               animate={{ opacity: 1, scale: 1 }}
               className="bg-white/10 rounded-2xl backdrop-blur-md "
             >
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center p-2">
                 <h1 className="text-center text-2xl font-semibold mb-4">
                   Comming Soon!
                 </h1>
