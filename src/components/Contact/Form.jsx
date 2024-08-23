@@ -4,7 +4,7 @@ const Form = ({ formPop, toggleForm }) => {
   return (
     <>
       {formPop && (
-        <div className="fixed top-0 left-0 w-full h-full z-50 overflow-y-auto bg-dark/70">
+        <div className="fixed top-0 left-0 w-full h-full z-50 overflow-y-auto bg-dark/70 ">
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[60%]">
             <motion.div
               initial={{ opacity: 0, scale: 0.5 }}
