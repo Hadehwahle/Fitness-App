@@ -32,7 +32,7 @@ const App = () => {
   return (
     <div className=" dark:bg-black bg-white dark:text-white text-black ">
       <Navbar />
-      <Hero formPop={formPop} toggleForm={toggleForm} />
+      <Hero formPop={formPop} setFormPop={setFormPop} toggleForm={toggleForm} />
       <Highlights />
       <About />
       <Contact toggleForm={toggleForm} />
