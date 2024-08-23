@@ -4,6 +4,8 @@ import Darkmode from "./Darkmode";
 import { useState } from "react";
 import { Link } from "react-scroll";
 import { NavLink } from "react-router-dom";
+import { useEffect } from "react";
+import { useRef } from "react";
 
 const navlinks = [
   {
@@ -41,9 +43,26 @@ const Navbar = () => {
   function handleCloseLink() {
     setMenuOpen(false);
   }
+  let menuRef = useRef();
+
+  useEffect(() => {
+    let handler = (e) => {
+      if (!menuRef.current.contains(e.target)) {
+        setMenuOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  }, [setMenuOpen]);
 
   return (
-    <nav className="sticky bg-white top-0 shadow-xl w-full dark:bg-dark dark:text-white z-50 py-2">
+    <nav
+      ref={menuRef}
+      className="sticky bg-white top-0 shadow-xl w-full dark:bg-dark dark:text-white z-50 py-2"
+    >
       <div className="container">
         <div className="flex items-center justify-between">
           <div>
