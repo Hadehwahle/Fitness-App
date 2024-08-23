@@ -1,6 +1,22 @@
 import { motion } from "framer-motion";
 import Message from "./Message";
-const Form = ({ formPop, toggleForm }) => {
+import { useEffect, useRef } from "react";
+const Form = ({ formPop, toggleForm, setFormPop }) => {
+  let formRef = useRef();
+
+  useEffect(() => {
+    let handler = (e) => {
+      if (!formRef.current.contains(e.target)) {
+        setFormPop(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  }, [setFormPop]);
+
   return (
     <>
       {formPop && (
@@ -10,6 +26,7 @@ const Form = ({ formPop, toggleForm }) => {
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               className="bg-white/10 rounded-2xl backdrop-blur-md "
+              ref={formRef}
             >
               <div className="p-6">
                 <h1 className="text-center text-2xl font-semibold mb-4">
