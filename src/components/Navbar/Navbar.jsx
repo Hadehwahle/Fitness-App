@@ -95,8 +95,8 @@ const Navbar = () => {
           )}
         </div>
       </div>
-      <div
-        className={`absolute xl:hidden top-[2.9rem] sm:top-[3.5rem] md:top-[4rem] left-0 w-full dark:bg-dark dark:text-white bg-white flex flex-col items-center font-semibold gap-6 text-lg transform transition-transform z-10 shadow-xl ${
+      <ul
+        className={`absolute xl:hidden top-[2.9rem] sm:top-[3.5rem] md:top-[4rem] left-0 w-full dark:bg-dark dark:text-white bg-white flex flex-col items-center font-semibold gap-0 sm:gap-2 md:gap-4 text-lg transform transition-transform z-10 shadow-xl ${
           menuOpen ? "opacity-100" : "opacity-0"
         }`}
         style={{ transition: "transform 0.3s ease, opacity 0.3s ease" }}
@@ -108,7 +108,7 @@ const Navbar = () => {
             duration={800}
             key={id}
             offset={-65}
-            className="list-none w-full text-center p-4 hover:bg-primary hover:duration-200 cursor-pointer "
+            className="list-none w-full text-center p-2 md:p-4 hover:bg-primary hover:duration-200 cursor-pointer "
           >
             <li onClick={handleCloseLink}>
               {menuOpen && (
@@ -118,7 +118,7 @@ const Navbar = () => {
                   duration={1000}
                   offset={-60}
                   onClick={handleCloseLink}
-                  className="inline-block text-xl font-semibold text-[0.9rem] md:text-[1rem] dark:hover:text-white duration-200"
+                  className="inline-block lg:text-xl font-semibold text-[0.8rem] sm:text-[0.9rem] md:text-[1rem] dark:hover:text-white duration-200"
                 >
                   {name}
                 </Link>
@@ -126,7 +126,7 @@ const Navbar = () => {
             </li>
           </Link>
         ))}
-      </div>
+      </ul>
     </nav>
   );
 };
