@@ -31,6 +31,17 @@ const navlinks = [
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // function handleLinkCliked(index) {
+  //   const clickedIndex = navlinks.map((nav, navIndex) => {
+  //     return navIndex !== index;
+  //   });
+  //   setMenuOpen(clickedIndex);
+  // }
+
+  function handleCloseLink() {
+    setMenuOpen(false);
+  }
+
   return (
     <nav className="sticky bg-white top-0 shadow-xl w-full dark:bg-dark dark:text-white z-50 py-2">
       <div className="container">
@@ -99,13 +110,14 @@ const Navbar = () => {
             offset={-65}
             className="list-none w-full text-center p-4 hover:bg-primary hover:duration-200 cursor-pointer "
           >
-            <li>
+            <li onClick={handleCloseLink}>
               {menuOpen && (
                 <Link
                   to={link}
                   smooth={true}
                   duration={1000}
                   offset={-60}
+                  onClick={handleCloseLink}
                   className="inline-block text-xl font-semibold text-[0.9rem] md:text-[1rem] dark:hover:text-white duration-200"
                 >
                   {name}
