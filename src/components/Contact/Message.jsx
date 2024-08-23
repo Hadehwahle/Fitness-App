@@ -58,7 +58,9 @@ const Message = ({ toggleForm }) => {
           onChange={(e) => setMessage(e.target.value)}
         ></textarea>
       </div>
-      <button className="primary-btn">SEND</button>
+      <button className="bg-primary text-white font-bold py-2 px-6 rounded-md hover:bg-primary/70 duration-200 inline-block w-[40%] mx-auto">
+        SEND
+      </button>
     </form>
   );
 };
