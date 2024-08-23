@@ -1,6 +1,22 @@
 import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
 
-const Store = ({ download, handleCloseButton }) => {
+const Store = ({ download, handleCloseButton, setDownload }) => {
+  let downloadRef = useRef();
+
+  useEffect(() => {
+    let handler = (e) => {
+      if (!downloadRef.current.contains(e.target)) {
+        setDownload(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  }, [setDownload]);
+
   return (
     <>
       {download && (
@@ -11,7 +27,7 @@ const Store = ({ download, handleCloseButton }) => {
               animate={{ opacity: 1, scale: 1 }}
               className="bg-white/10 rounded-2xl backdrop-blur-md "
             >
-              <div className="flex flex-col items-center p-2">
+              <div ref={downloadRef} className="flex flex-col items-center p-2">
                 <h1 className="text-center text-2xl font-semibold mb-4">
                   Comming Soon!
                 </h1>
