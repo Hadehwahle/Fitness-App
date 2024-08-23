@@ -42,7 +42,7 @@ const bgStyle = {
   width: "100%",
 };
 
-const Hero = ({ toggleForm, formPop }) => {
+const Hero = ({ toggleForm, formPop, setFormPop }) => {
   var settings = {
     dots: false,
     infinite: true,
@@ -80,7 +80,7 @@ const Hero = ({ toggleForm, formPop }) => {
         </div>
       </div>
 
-      <Form toggleForm={toggleForm} formPop={formPop} />
+      <Form toggleForm={toggleForm} setFormPop={setFormPop} formPop={formPop} />
     </div>
   );
 };
