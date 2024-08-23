@@ -13,11 +13,11 @@ const App = () => {
   const [download, setDownload] = useState(false);
 
   function handleCloseButton() {
-    setDownload((prev) => !prev);
+    setDownload(!download);
   }
 
   const toggleForm = () => {
-    setFormPop((prev) => !prev);
+    setFormPop(!formPop);
   };
 
   useEffect(() => {
@@ -28,6 +28,7 @@ const App = () => {
       delay: 100,
     });
   });
+
   return (
     <div className=" dark:bg-black bg-white dark:text-white text-black ">
       <Navbar />
